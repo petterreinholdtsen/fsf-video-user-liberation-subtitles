@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+if [ ! -e FSF_30_240p.webm ] ; then
+    wget https://static.fsf.org/nosvn/FSF30-video/FSF_30_240p.webm
+fi
+
+vlc --sub-file FSF_30_720p.nb.vtt  FSF_30_240p.webm
